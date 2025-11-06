@@ -104,6 +104,27 @@ print("-------------------------------------------\n"
 # Item 2: phone (silver) - Found at: shopping centre
 #
 # Write your code below:
+found_items=[]
+found_items=[found_item]
+# found_items.append(found_item)
+another_item=input("do you want to add another item:(yes/no )")
+
+founditem_1= {}
+if another_item.lower()=="yes":
+    founditem_1["name"] =input("enter your new item\n")
+    founditem_1["colour"] = input("enter your new item colour\n")
+    founditem_1["location"] =input("enter your new item location\n")
+else:
+    print (found_items)
+
+found_items.append(founditem_1)
+print (found_items)
+counter=1
+
+for i in found_items:
+    print(f"Item {counter}: {i["name"]}, {i["colour"]}, {i["location"]}")
+    counter = counter + 1
+
 
 # HINT: To access dictionary values, use: dictionary_name["key_name"]
 # Example: found_item["name"] gets the name value
