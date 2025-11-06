@@ -177,6 +177,16 @@ print("-------------------------------------------\n"
 #
 # Write your code below:
 
+print ("FOUND ITEMS RECORDS")
+record = 1
+if found_items == []:
+    print("No items recorded yet")
+else:
+    for i in found_items:
+       print(f"item NO:{record}\n Name :{i["name"]}\n Colour: {i["colour"]}\n Location:{i["location"]}         \n")
+       record = record +1
+   
+     
 # HINT: When looping through a list of dictionaries:
 # for item in found_items:
 #     print(item["name"])  # Access the name from each dictionary
