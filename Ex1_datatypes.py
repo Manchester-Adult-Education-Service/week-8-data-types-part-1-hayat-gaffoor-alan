@@ -183,7 +183,7 @@ if found_items == []:
     print("No items recorded yet")
 else:
     for i in found_items:
-       print(f"item NO:{record}\n Name :{i["name"]}\n Colour: {i["colour"]}\n Location:{i["location"]}         \n")
+       print(f"item N :{record}\n Name :{i["name"]}\n Colour: {i["colour"]}\n Location:{i["location"]}         \n")
        record = record +1
    
      
@@ -230,8 +230,15 @@ print("-------------------------------------------\n"
 # HINT: Use item["name"].lower() == search_term.lower()
 #
 # Write your code below:
+search_item =input("Enter the item you are looking for\n")
 
-
+for i in found_items:
+    if search_item.lower() == i["name"].lower():
+        found = True
+        print(f" {i["name"]}, {i["colour"]} found at: {i["location"]}")
+    else:
+        found = False
+        print(" No items found with that name, please try again.")
 
 
 # -------------------------------------------
