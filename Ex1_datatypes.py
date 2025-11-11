@@ -280,6 +280,19 @@ print("-------------------------------------------\n"
 #
 # Write your code below:
 
+newItem_name = input("Enter the new item name\n")
+newItem_colour = input("Enter the new item colour\n")
+newItem_location = input("Enter the new item location\n")
+
+if len(newItem_name) == 0 or len(newItem_colour)== 0 or len(newItem_location)==0 :
+    print("Error!, all fields must be filled in")
+else:
+    new_item= {"name":newItem_name, "colour": newItem_colour, "location": newItem_location}
+    found_items.append(new_item)
+    print("Item added successfully!")
+    print(found_items)
+
+
 
 
 
