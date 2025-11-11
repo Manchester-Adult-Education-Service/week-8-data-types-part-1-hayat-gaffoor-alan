@@ -107,7 +107,7 @@ print("-------------------------------------------\n"
 found_items=[]
 found_items=[found_item]
 # found_items.append(found_item)
-another_item=input("do you want to add another item:(yes/no )")
+another_item=input("do you want to add another item:(yes/no )\n")
 
 founditem_1= {}
 if another_item.lower()=="yes":
@@ -234,11 +234,10 @@ search_item =input("Enter the item you are looking for\n")
 
 for i in found_items:
     if search_item.lower() == i["name"].lower():
-        found = True
         print(f" {i["name"]}, {i["colour"]} found at: {i["location"]}")
-    else:
-        found = False
-        print(" No items found with that name, please try again.")
+        break
+else:
+    print(" No items found with that name, please try again.")
 
 
 # -------------------------------------------
