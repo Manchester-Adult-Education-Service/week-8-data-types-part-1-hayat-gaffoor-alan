@@ -284,16 +284,22 @@ newItem_name = input("Enter the new item name\n")
 newItem_colour = input("Enter the new item colour\n")
 newItem_location = input("Enter the new item location\n")
 
-if len(newItem_name) == 0 or len(newItem_colour)== 0 or len(newItem_location)==0 :
-    print("Error!, all fields must be filled in")
-else:
+#if len(newItem_name) == 0 or len(newItem_colour)== 0 or len(newItem_location)==0 :
+#   print("Error!, all fields must be filled in")
+
+#else:
+#    new_item= {"name":newItem_name, "colour": newItem_colour, "location": newItem_location}
+#    found_items.append(new_item)
+#    print("Item added successfully!")
+#    print(found_items)
+
+if len(newItem_name) > 0 and len(newItem_colour)> 0 and len(newItem_location)>0 :
     new_item= {"name":newItem_name, "colour": newItem_colour, "location": newItem_location}
     found_items.append(new_item)
     print("Item added successfully!")
     print(found_items)
-
-
-
+else: 
+    print("Error!, all fields must be filled in")
 
 
 # -------------------------------------------
@@ -328,7 +334,6 @@ print("-------------------------------------------\n"
 #
 # HINT: You can add new keys to existing dictionaries like this:
 # item["id"] = next_id
-#
 # Write your code below:
 
 
