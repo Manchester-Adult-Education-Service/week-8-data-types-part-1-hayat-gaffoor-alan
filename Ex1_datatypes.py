@@ -56,6 +56,13 @@ print("-------------------------------------------\n"
 # Recorded: wallet (black) found at train station
 #
 # Write your code below:
+item_name = input("Enter the item name\n")
+item_colour = input("Enter the item colour\n")
+item_location = input("Enter the item location\n")
+
+found_item = { "name": item_name, "colour": item_colour, "location":item_location }
+print(found_item)
+print(f"Recorded: {found_item["name"]}, {found_item["colour"]} found at {found_item["location"]}")
 
 # HINT: Create dictionary syntax is:
 # my_dict = {"key1": value1, "key2": value2, "key3": value3}
@@ -97,6 +104,27 @@ print("-------------------------------------------\n"
 # Item 2: phone (silver) - Found at: shopping centre
 #
 # Write your code below:
+found_items=[]
+found_items=[found_item]
+# found_items.append(found_item)
+another_item=input("do you want to add another item:(yes/no )\n")
+
+founditem_1= {}
+if another_item.lower()=="yes":
+    founditem_1["name"] =input("enter your new item\n")
+    founditem_1["colour"] = input("enter your new item colour\n")
+    founditem_1["location"] =input("enter your new item location\n")
+else:
+    print (found_items)
+
+found_items.append(founditem_1)
+print (found_items)
+counter=1
+
+for i in found_items:
+    print(f"Item {counter}: {i["name"]}, {i["colour"]}, {i["location"]}")
+    counter = counter + 1
+
 
 # HINT: To access dictionary values, use: dictionary_name["key_name"]
 # Example: found_item["name"] gets the name value
@@ -149,6 +177,16 @@ print("-------------------------------------------\n"
 #
 # Write your code below:
 
+print ("FOUND ITEMS RECORDS")
+record = 1
+if found_items == []:
+    print("No items recorded yet")
+else:
+    for i in found_items:
+       print(f"item N :{record}\n Name :{i["name"]}\n Colour: {i["colour"]}\n Location:{i["location"]}         \n")
+       record = record +1
+   
+     
 # HINT: When looping through a list of dictionaries:
 # for item in found_items:
 #     print(item["name"])  # Access the name from each dictionary
@@ -192,8 +230,14 @@ print("-------------------------------------------\n"
 # HINT: Use item["name"].lower() == search_term.lower()
 #
 # Write your code below:
+search_item =input("Enter the item you are looking for\n")
 
-
+for i in found_items:
+    if search_item.lower() == i["name"].lower():
+        print(f" {i["name"]}, {i["colour"]} found at: {i["location"]}")
+        break
+else:
+    print(" No items found with that name, please try again.")
 
 
 # -------------------------------------------
@@ -236,7 +280,26 @@ print("-------------------------------------------\n"
 #
 # Write your code below:
 
+newItem_name = input("Enter the new item name\n")
+newItem_colour = input("Enter the new item colour\n")
+newItem_location = input("Enter the new item location\n")
 
+#if len(newItem_name) == 0 or len(newItem_colour)== 0 or len(newItem_location)==0 :
+#   print("Error!, all fields must be filled in")
+
+#else:
+#    new_item= {"name":newItem_name, "colour": newItem_colour, "location": newItem_location}
+#    found_items.append(new_item)
+#    print("Item added successfully!")
+#    print(found_items)
+
+if len(newItem_name) > 0 and len(newItem_colour)> 0 and len(newItem_location)>0 :
+    new_item= {"name":newItem_name, "colour": newItem_colour, "location": newItem_location}
+    found_items.append(new_item)
+    print("Item added successfully!")
+    print(found_items)
+else: 
+    print("Error!, all fields must be filled in")
 
 
 # -------------------------------------------
@@ -271,7 +334,6 @@ print("-------------------------------------------\n"
 #
 # HINT: You can add new keys to existing dictionaries like this:
 # item["id"] = next_id
-#
 # Write your code below:
 
 
